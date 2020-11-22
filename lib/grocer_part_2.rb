@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+  new_cart = []
   index = 0 
   cart.each do |current_item|
     
