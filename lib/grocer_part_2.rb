@@ -59,7 +59,7 @@ def checkout(cart, coupons)
   # some irritated customers
   
   working_cart = consolidate_cart(cart)
-  couponed_cart = apply_coupons(working_cart)
+  couponed_cart = apply_coupons(working_cart, coupons)
   clearance_cart = apply_clearance(couponed_cart)
   
   total_price = 0 
@@ -69,9 +69,7 @@ def checkout(cart, coupons)
   counter += 1
   end
   if total_price > 100
-    total_price -= (total - 0.10)
-    end
+      total_price -= (total * 0.10)
+  end
     total_price
-  
-  
 end
