@@ -6,6 +6,8 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   
   index = 0 
+  cart.each do |current_item|
+    
     
   end
   
