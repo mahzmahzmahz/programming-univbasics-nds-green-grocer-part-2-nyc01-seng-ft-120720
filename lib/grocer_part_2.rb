@@ -5,11 +5,14 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   counter = 0 
+  
   while counter < coupons.length 
     item = find_item_by_name_in_collection(coupons[counter][:item], cart)
     coupon_finder = "#{coupons[counter][:item]} W/COUPON"
     item_with_coupon = find_item_by_name_in_collection(coupon_finder, cart)
+    
     if item && item[:count] >= coupons[counter][:num]
+     
       if item_with_coupon
         item_with_coupon[:count] += coupons[counter][:num]
         item[:count] -= coupons[counter][:num]
